@@ -23,3 +23,9 @@ All 10 projects have PPTX links. YOLO26 has a verified GitHub repository; other 
 ## Design revision
 The 10 approved projects now appear in a spacious three-column grid (two on tablets, one on phones), with distinct illustrations based on the previously approved visual mockup, larger text, and PPTX/GitHub links on each card.
 The resume includes `Portfolio: URL pending deployment` alongside LinkedIn and GitHub. Replace this placeholder with the real website address after deployment.
+
+
+## Browser viewing (fixed)
+The Resume link opens `assets/resume.pdf` in a new tab. All ten View Slides buttons open browser-viewable PDFs from `presentations/pdf/`, with no dependency on Microsoft's Office Online viewer. The original editable PPTX files remain in `presentations/`.
+
+**GitHub Pages:** Upload the contents of this folder to the root of your `AI-ML-Portfolio` repository, so `index.html` is at the root.
