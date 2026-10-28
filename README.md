@@ -1,31 +1,13 @@
-# Thangaraj T — AI/ML Engineer Portfolio
+# Thangaraj T — AI/ML Portfolio
 
-Static HTML/CSS/JavaScript portfolio featuring **exactly 10 projects** from the supplied PowerPoint presentations.
+Updated with **MediGuide AI** as the featured project, an edited local-demo MP4, screenshot thumbnail, and a new one-page Python Full-Stack + AI resume.
 
-## Open locally
-Open `index.html` in a browser (or use VS Code Live Server).
+## Publish on GitHub Pages
 
-## Project presentations
-Each project has a thumbnail generated from the **first slide** of its original PowerPoint and buttons to view or download its `.pptx` file. All source PowerPoints are included in `presentations/`.
+Copy the contents of this `ai_ml_portfolio/` folder into the root of your existing portfolio repository, replacing files with the same names. Commit and push. No backend is required for this static portfolio.
 
-## Contact
-Email: tmthanagaraj1980@gmail.com
-Phone/WhatsApp: +91 9952045978
+The MediGuide AI video is a **recording of a locally running app**, not a deployed demo. The project card links to the recorded video and its GitHub repository.
 
-## Deploy
-Upload all website files and folders to GitHub Pages. Do not omit `assets/` or `presentations/`. No live-demo URLs are included; they can be added after confirmation.
+## Important
 
-Note: the resume PDF was supplied before the email correction and may contain the previous email address. Update the resume separately before publishing if you want it consistent.
-
-All 10 projects have PPTX links. YOLO26 has a verified GitHub repository; other GitHub buttons open the profile until exact repository URLs are provided.
-
-
-## Design revision
-The 10 approved projects now appear in a spacious three-column grid (two on tablets, one on phones), with distinct illustrations based on the previously approved visual mockup, larger text, and PPTX/GitHub links on each card.
-The resume includes `Portfolio: URL pending deployment` alongside LinkedIn and GitHub. Replace this placeholder with the real website address after deployment.
-
-
-## Browser viewing (fixed)
-The Resume link opens `assets/resume.pdf` in a new tab. All ten View Slides buttons open browser-viewable PDFs from `presentations/pdf/`, with no dependency on Microsoft's Office Online viewer. The original editable PPTX files remain in `presentations/`.
-
-**GitHub Pages:** Upload the contents of this folder to the root of your `AI-ML-Portfolio` repository, so `index.html` is at the root.
+GitHub Pages may enforce repository/file-size limits; the edited MP4 is compressed. Check its size before committing. Resume links open the PDF in-browser.

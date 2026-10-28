@@ -9,6 +9,16 @@ const CONFIG = {
 // Replace each empty repo value with the exact GitHub URL for that project.
 const projects = [
   {
+    "title": "MediGuide AI — LangGraph Healthcare RAG",
+    "category": "genai",
+    "label": "FEATURED · PYTHON FULL STACK + GENAI",
+    "description": "Article-aware healthcare learning assistant with FastAPI, vanilla JavaScript, FAISS semantic retrieval, LangGraph orchestration and Groq-grounded answers across 100 MedlinePlus topics. Local demo; not cloud deployed.",
+    "tags": ["FastAPI", "LangGraph", "RAG", "FAISS", "Groq", "JavaScript"],
+    "image": "assets/projects/mediguide-ai.jpg",
+    "video": "assets/videos/MediGuide_AI_Demo.mp4",
+    "repo": "https://github.com/tmthangaraj1980-AIML/MediGuide-AI"
+  },
+  {
     "title": "AI-Based Smart Waste Segregation & Recycling Assistant",
     "category": "cv",
     "label": "COMPUTER VISION",
@@ -141,12 +151,6 @@ const projects = [
   }
 ];
 
-// View the PDF export of each presentation directly in a new browser tab.
-function presentationViewUrl(path) {
-  const filename = path.split('/').pop().replace(/\.pptx$/i, '.pdf');
-  return encodeURI('presentations/pdf/' + filename);
-}
-
 const grid = document.querySelector('#project-grid');
 const escapeHTML = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function renderProjects(filter='all') {
@@ -157,7 +161,7 @@ function renderProjects(filter='all') {
       <div class="project-body"><div class="project-meta"><span>${escapeHTML(p.label)}</span></div>
       <h3>${escapeHTML(p.title)}</h3><p>${escapeHTML(p.description)}</p>
       <div class="project-tags">${p.tags.map(t=>`<span>${escapeHTML(t)}</span>`).join('')}</div>
-      <div class="project-actions"><a class="project-link ppt-button" href="${presentationViewUrl(p.ppt)}" target="_blank" rel="noopener noreferrer" title="Open slides as PDF in a new tab">📊 View Slides ↗</a><a class="project-link github-button" href="${p.repo || CONFIG.github}" target="_blank" rel="noopener noreferrer" title="${p.repo ? "Project GitHub repository" : "GitHub profile — project repository not yet confirmed"}">⌘ ${p.repo ? "GitHub" : "GitHub Profile"} ↗</a></div>
+      <div class="project-actions">${p.video ? `<a class="project-link ppt-button" href="${encodeURI(p.video)}" target="_blank" rel="noopener noreferrer">▶ Watch Demo</a>` : `<a class="project-link ppt-button" href="${encodeURI(p.ppt)}" download>📊 PPTX ↓</a>`}<a class="project-link github-button" href="${p.repo || CONFIG.github}" target="_blank" rel="noopener noreferrer" title="${p.repo ? "Project GitHub repository" : "GitHub profile — project repository not yet confirmed"}">⌘ ${p.repo ? "GitHub" : "GitHub Profile"} ↗</a></div>
       </div>
     </article>`).join('');
 }
@@ -182,9 +186,9 @@ for(const [id,url,label] of [['github-link',CONFIG.github,'GitHub'],['linkedin-l
   else link.addEventListener('click',e=>{e.preventDefault();showToast(`Add your ${label} profile URL in script.js before publishing.`);});
 }
 document.querySelectorAll('[data-resume]').forEach(link=>link.addEventListener('click',async e=>{
-  // Confirm the resume exists before opening its PDF in a new tab.
+  // A resume is not included. This prevents a confusing 404 until the PDF is supplied.
   try{const response=await fetch(CONFIG.resumePath,{method:'HEAD'});if(!response.ok)throw new Error('missing');}
-  catch{e.preventDefault();showToast('Resume is unavailable. Check assets/resume.pdf.');}
+  catch{e.preventDefault();showToast('Add your resume as assets/resume.pdf to enable this download.');}
 }));
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));}
 else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));
