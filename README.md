@@ -11,3 +11,6 @@ The MediGuide AI video is a **recording of a locally running app**, not a deploy
 ## Important
 
 GitHub Pages may enforce repository/file-size limits; the edited MP4 is compressed. Check its size before committing. Resume links open the PDF in-browser.
+
+
+Resume refreshed: AI/ML Engineer first, Python Full-Stack Developer second. Cache-busted website assets.

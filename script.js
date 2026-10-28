@@ -152,6 +152,7 @@ const projects = [
 ];
 
 const grid = document.querySelector('#project-grid');
+console.info('Portfolio updated: MediGuide AI + AI/ML-first resume | 2026-10-29');
 const escapeHTML = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function renderProjects(filter='all') {
   const selected = projects.filter(p => filter === 'all' || p.category === filter);
